@@ -3,16 +3,12 @@
 -module(combattables).
 
 -import(lists,[any/2]). 
+-import(combat,[class/0]).
 
 -export([basetohit/3, monster_offset/1]).
--export_type([class/0]).
 
--spec basetohit(class(), number(), integer()) -> integer().
--type class() :: cleric | druid | monk | 
-				 fighter | paladin | ranger | 
-				 thief | assassin | 
-				 magicuser | illusionist |
-				 monster.
+-spec basetohit(combat:class(), number(), integer()) -> integer().
+
 
 clericdruidmonk0() -> { 20, 18, 16, 14, 12, 10, 9 }.
 fighter0() -> { 20, 20, 18, 16, 14, 12, 10, 08, 06, 04 }.
