@@ -9,13 +9,20 @@
 
 -spec basetohit(combat:class(), number(), integer()) -> integer().
 
-
+% From 1st edition AD&D DMG p.74-75.
 clericdruidmonk0() -> { 20, 18, 16, 14, 12, 10, 9 }.
 fighter0() -> { 20, 20, 18, 16, 14, 12, 10, 08, 06, 04 }.
 magicuserillusionist0() -> { 20, 19, 16, 13, 11 }.
 thiefassassin0() -> { 20, 19, 16, 14, 12, 10 }.
 monster0() -> { 20, 20, 19, 18, 16, 15, 13, 12, 10, 9, 8, 7 }.
 
+% For monster hitdice under 2 express Level as
+% a decimal value.
+%
+% 0 = 0
+% 0.5 = up to 1-1
+% 1 = 1
+% 1.5 = 1+
 monster_offset(Level) ->
 	if 
 		Level < 0.5 -> 0;
