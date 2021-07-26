@@ -5,7 +5,7 @@
 -import(lists,[any/2]). 
 -import(combat,[class/0]).
 
--export([basetohit/3, monster_offset/1]).
+-export([basetohit/3]).
 
 -spec basetohit(combat:class(), number(), integer()) -> integer().
 
