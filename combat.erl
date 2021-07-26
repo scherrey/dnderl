@@ -12,6 +12,8 @@
 -import(combattables,[basetohit/3]).
 
 -export([thac0/3]).
+% this isn't allowed - bad function name
+%-export([thac0/3, combattables:basetohit/3]).
 
 -spec thac0(class(), number(), integer()) -> integer().
 
